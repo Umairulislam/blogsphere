@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Blog Home</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <main class="posts-container">
+      <h1>All Blog posts</h1>
+      <% if (posts.length > 0) { %> <% posts.forEach(post => { %>
+      <div class="post-item">
+        <h2 class="post-item-title"><%= post.title %></h2>
+        <p class="post-item-content">
+          <%= post.content.substring(0, 150) %>...
+        </p>
+        <p class="post-item-date">
+          Published on: <%= post.createdAt.toLocaleDateString("en-US") %>
+        </p>
+        <div class="actions">
+          <button class="actions-btn">
+            <a href="/post/<%= post.id %>" class="post-item-link">Read more</a>
+          </button>
+          <button class="actions-btn">
+            <a href="/edit-post/<%= post.id %>" class="post-item-link">Edit</a>
+          </button>
+          <form action="/delete-post/<%= post.id %>" method="POST">
+            <button type="submit" class="actions-btn post-item-delete">
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
+      <% }) %> <% } else { %>
+      <p class="no-posts-msg">No posts to display</p>
+      <% } %>
+      <div class="create-post-link-container">
+        <a href="/new-post" class="create-post-link">Create New Post</a>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Post</title>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main class="post">
+      <h2 class="post-title"><%= post.title %></h2>
+      <p class="post-content"><%= post.content %></p>
+      <p class="post-date">
+        Published on <%= new Date(post.createdAt).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric' }) %>
+      </p>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

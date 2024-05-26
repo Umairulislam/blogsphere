@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 32px 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+/* Header Section */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Home Section */
+.posts-container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .posts-container {
+    padding: 8px;
+    width: 80%;
+  }
+}
+
+.post-item {
+  padding: 16px;
+  margin: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.post-item-title {
+  color: #333;
+  margin-top: 5px;
+}
+
+.post-item-content {
+  color: #555;
+  text-align: left;
+}
+
+.post-item-date {
+  color: #777;
+}
+
+.post-item-link {
+  color: white;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  justify-content: start;
+  gap: 6px;
+  flex-direction: column;
+  align-items: start;
+}
+
+.actions-btn {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-item-link:hover,
+.post-item-delete:hover {
+  text-decoration: underline;
+}
+
+.create-post-link-container {
+  text-align: center;
+}
+
+.create-post-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 12px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.create-post-link:hover {
+  background-color: #555;
+}
+
+/* Main Post section */
+.post {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .post {
+    padding: 16px;
+    width: 80%;
+  }
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-title {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .post-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.post-content {
+  color: #555;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: justify;
+  margin-top: 16px;
+}
+
+.post-date {
+  color: #777;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.no-posts-msg {
+  color: #888;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* New Post Section */
+.new-post-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .new-post-container {
+    padding: 12px;
+    width: 80%;
+  }
+}
+
+/* New post form */
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* New post label */
+.new-post-label {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* New post input */
+.new-post-input,
+.new-post-textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* New post textarea */
+.new-post-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* New post submit button */
+.new-post-submit {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-post-submit:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

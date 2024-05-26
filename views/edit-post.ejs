@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Edit Post</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <main class="new-post-container">
+      <h1 class="new-post-title">Edit Post</h1>
+      <form
+        action="/edit-post/<%= post.id %>"
+        method="POST"
+        class="new-post-form"
+      >
+        <label for="title" class="new-post-label">Title</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="new-post-input"
+          value="<%= post.title %>"
+          required
+        />
+        <label for="content" class="new-post-label">Content</label>
+        <textarea
+          name="content"
+          id="content"
+          class="new-post-textarea"
+          required
+        >
+<%= post.content %></textarea
+        >
+        <button type="submit" class="new-post-submit">Edit Post</button>
+      </form>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
