@@ -69,33 +69,6 @@ BlogSphere is a simple blog application built with Express, Node.js, and EJS. It
    - Enter the title and content of the post
    - Click on the "Publish" button
 
-## File Structure
-
-```sh
-blogsphere/
-│
-├── public/
-│   ├── styles/
-│   │   └── style.css
-│   └── images/
-│       └── logo.png
-│
-├── views/
-│   ├── partials/
-│   │   ├── header.ejs
-│   │   └── footer.ejs
-│   ├── home.ejs
-│   ├── new-post.ejs
-│   ├── post.ejs
-│   └── edit-post.ejs
-│
-├── .gitignore
-├── README.md
-├── app.js
-├── package.json
-└── package-lock.json
-```
-
 ## Deployment
 
 This application can be deployed to platforms like Heroku, Vercel, or Netlify. Make sure to update the `start` script in the `package.json` file to `node index.js` before deploying.
